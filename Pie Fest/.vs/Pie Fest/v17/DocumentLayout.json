@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ewmer406\\Desktop\\sy25-26\\Pie Fest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE49EEBB-A5FB-4E90-896E-9E46F57E7720}|Pie Fest\\Pie Fest.pyproj|C:\\Users\\ewmer406\\Desktop\\sy25-26\\Pie Fest\\Pie Fest\\Pie_Fest.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{EE49EEBB-A5FB-4E90-896E-9E46F57E7720}|Pie Fest\\Pie Fest.pyproj|solutionrelative:Pie Fest\\Pie_Fest.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pie_Fest.py",
+              "DocumentMoniker": "C:\\Users\\ewmer406\\Desktop\\sy25-26\\Pie Fest\\Pie Fest\\Pie_Fest.py",
+              "RelativeDocumentMoniker": "Pie Fest\\Pie_Fest.py",
+              "ToolTip": "C:\\Users\\ewmer406\\Desktop\\sy25-26\\Pie Fest\\Pie Fest\\Pie_Fest.py",
+              "RelativeToolTip": "Pie Fest\\Pie_Fest.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-01-09T20:31:21.908Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
