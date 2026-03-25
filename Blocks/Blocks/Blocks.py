@@ -1,5 +1,5 @@
-import pygame
-import random
+import pygame 
+import random 
 
 # Initialize Pygame
 pygame.init()
@@ -11,6 +11,7 @@ RED = (255, 0, 0)
 BLUE = (0, 0, 255)
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Dodge the Red Square")
 clock = pygame.time.Clock()
 
 # Player properties
@@ -30,34 +31,38 @@ while not game_over:
         if event.type == pygame.QUIT:
             game_over = True
 
-    # --- BUG 1: Movement Logic ---
+    # Movement Logic (with screen boundaries)
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT]:
-        player_pos[0] -= 5  # Should move left
-    if keys[pygame.K_RIGHT]:
-        player_pos[0] += 5  # Should move right
+    if keys[pygame.K_LEFT] and player_pos[0] > 0:
+        player_pos[0] -= 10  
+    if keys[pygame.K_RIGHT] and player_pos[0] < WIDTH - player_size:
+        player_pos[0] += 10  
 
     # Update enemy position
     enemy_pos[1] += enemy_speed
 
-    # --- BUG 2: Resetting the Enemy ---
+    # --- FIX BUG 2: Resetting the Enemy ---
+    # Move the enemy back to the top and pick a new random X
     if enemy_pos[1] > HEIGHT:
-        # The enemy should go back to the top with a new X position
-        # but the code below is missing something to make it "restart"
+        enemy_pos[1] = 0 - enemy_size
+        enemy_pos[0] = random.randint(0, WIDTH - enemy_size)
         score += 1
         print(f"Score: {score}")
 
-    # --- BUG 3: Collision Detection ---
-    # This logic is mathematically incorrect for rectangular collision
-    if (enemy_pos[0] == player_pos[0]) and (enemy_pos[1] == player_pos[1]):
-        print("Game Over!")
+    # --- FIX BUG 3: Collision Detection ---
+    # Using Pygame's Rect objects makes collision math much easier
+    player_rect = pygame.Rect(player_pos[0], player_pos[1], player_size, player_size)
+    enemy_rect = pygame.Rect(enemy_pos[0], enemy_pos[1], enemy_size, enemy_size)
+
+    if player_rect.colliderect(enemy_rect):
+        print(f"Game Over! Final Score: {score}")
         game_over = True
         
     # Drawing
     screen.fill((0, 0, 0))
     
-    pygame.draw.rect(screen, RED, (enemy_pos[0], enemy_pos[1], enemy_size, enemy_size))
-    pygame.draw.rect(screen, BLUE, (player_pos[0], player_pos[1], player_size, player_size))
+    pygame.draw.rect(screen, RED, enemy_rect)
+    pygame.draw.rect(screen, BLUE, player_rect)
 
     pygame.display.update()
     clock.tick(30)
