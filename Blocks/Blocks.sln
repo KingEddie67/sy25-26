@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Blocks", "Blocks\Blocks.pyproj", "{F4812B7D-9BF5-4703-B6C7-A0EF6D8DF61E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4812B7D-9BF5-4703-B6C7-A0EF6D8DF61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4812B7D-9BF5-4703-B6C7-A0EF6D8DF61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E0E57AD-A415-4DA5-BD0B-2CDA1BB2CEE9}
+	EndGlobalSection
+EndGlobal
